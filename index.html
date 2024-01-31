@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT and Canvas Integration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Your Canvas Courses</h1>
+        <form method="post">
+            <input type="text" name="keyword" placeholder="Enter keyword or description">
+            <input type="submit" value="Search">
+        </form>
+        {% if result %}
+            <div class="result">
+                {{ result }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
