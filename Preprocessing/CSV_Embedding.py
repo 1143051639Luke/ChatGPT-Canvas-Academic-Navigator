@@ -1,33 +1,18 @@
-from docx import Document
-import openai
 import pandas as pd
-import numpy as np
-
-def read_text_from_txt(filename):
-    with open(filename, 'r', encoding='utf-8') as file:
-        text = file.read()
-    return text
-
-text = read_text_from_txt('/Users/luke/Desktop/Canvas/test.txt')
-
-
-openai.api_key = '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'
-
-def text_to_embeddings(text):
-    response = openai.Embedding.create(
-        input=text,
-        model="text-embedding-3-small"  # Or another model like "text-embedding-3-small"
-    )
-    return response['data'][0]['embedding']
-
-embeddings = text_to_embeddings(text)
+import os
+from openai import OpenAI
 
 
 
-def save_embeddings_to_numpy(embeddings, filename):
-    np.save(filename, np.array(embeddings))
+input_datapath = "Data/test2.csv"  #Should be csv file with "Text" and "Value" columns
+df = pd.read_csv(input_datapath)
+df = df[["Text","Value"]]
 
-# Example usage
-save_embeddings_to_numpy(embeddings, 'embeddings.npy')
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "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"))
 
+def get_embedding(text, model="text-embedding-3-large"):
+   text = text.replace("\n", " ")
+   return client.embeddings.create(input = [text], model=model).data[0].embedding
 
+df['Value'] = df.Text.apply(lambda x: get_embedding(x, model='text-embedding-3-small'))
+df.to_csv('output/test2_embed.csv', index=False)
