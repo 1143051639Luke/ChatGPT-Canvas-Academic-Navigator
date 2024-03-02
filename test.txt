@@ -1,0 +1,87 @@
+Meeting Q&A Transcript
+Date of Meeting: February 22, 2024
+Question1 
+Q: How are student holds indicated in the SIC and WDC systems, and what challenges does this present? 
+A: In the SIC system, student holds are clearly visible with a red indicator as soon as one logs in, making them easy to identify. In contrast, the WDC system requires navigating through student records to find and assess holds, adding time and complexity to the process.
+Q: Are there any future updates planned to improve the visibility of student holds in these systems? 
+A: Currently, there are no specific updates or brainstorming sessions planned to address the visibility of student holds directly. However, there is a development training coming up focused on how to add, view, and remove registration holds.
+Q: What solutions are being considered to help manage student holds more efficiently? 
+A: While there is an acknowledgment of the issue's significance, the only mentioned forthcoming feature is the introduction of reports that allow for the searching of students on hold. This feature, however, does not offer the immediate visibility of holds like the red flag in the SIC system.
+
+Question 2
+Q: What is the status of the issue with graduate students registering in 400 level courses? 
+A: The concern was that graduate students might not have the prerequisite in the system unless they were undergraduate students at the same institution. The problem persists because prerequisites listed in the course calendar are enforced. The solutions offered are to provide a token or manually register the students if they want to maintain prerequisites for other students.
+Q: Has there been a resolution to the issue of prerequisites for graduate students? 
+A: It seems there was a fix to the system rules to allow graduate students to register for courses requiring third-year standing or above, but problems may still arise if prerequisites are still listed in the system. Tegan Stusiak believes the issue was addressed and commits to double-checking and confirming the update. They also mention that a Q&A compilation from all sessions will be distributed later.
+
+Question 3:
+Q: How can one ensure a safe schedule that confirms all scheduling conflicts have been resolved, especially if the system only shows full-year courses in term one and not term two?
+A: The system does show conflicts for term one courses if a student is currently registered, but it won't show conflicts for term two if they are not registered. Students will need to be aware that the system will not display conflicts between the two terms. This is a known limitation of the system, and training guides will be developed to assist students in this area.
+
+Question 4:
+Q: Who are registration specialist staff?
+A: A registration specialist is a security role within the Workday Student system. This role is designated for individuals who assist students with their registration process. It doesn't necessarily correspond to one's job title but rather to the duties associated with their job, particularly in supporting student registration. The term may have been used specifically because it is the recognized term within the system's security settings, even if it might cause some confusion.
+Question 5:
+Q: Why have an "Add Course" button if staff and students aren't supposed to use it?
+A: The "Add Course" button is a feature in Workday Student that was not functioning optimally. An improvement is expected in the system's functionality in a few weeks. This button will be replaced with an "Add Course Sections" button, which will be a significant enhancement. This new feature will allow students to add multiple course sections simultaneously, although they will need to ensure there are no scheduling conflicts or overlaps with other courses. This update is pending approval by committees, and once approved, the materials will be updated to reflect this change. The existence of the initially non-optimal button is one of the drawbacks of using a system that isn't custom-designed, and sometimes there are features that cannot be configured or altered. However, this also demonstrates how functionality can improve as the system evolves.
+
+Question 6:
+Q: Considering students often don't read emails or instructions, how are advisors supposed to manage the student learning curve during one of the busiest times of the year?
+A: The issue is part of what is being termed "student readiness" in the project, and planning for this is still underway. Students will not access the system until early May when the course schedule is published. The system is being designed to be as easy to navigate as possible. The team is aware of potential issues during the registration period and is considering the best support model to assist advisors and students, which is yet to be finalized. Recommendations or requests for functionality improvements can be made after the full launch with the Workday Student system.
+Q: Is there confusion around the "Remove" button that deletes the whole schedule, and could it be renamed to "Delete" for clarity?
+A: There is agreement that the "Remove" button is not best labeled and that it should ideally be renamed to "Delete" to prevent students from accidentally deleting their entire schedule. However, until the full launch with Workday Student, no brainstorming for improvements can take place. This is one aspect over which there isn't much control currently, but it could be addressed post-launch.
+
+Question 7:
+Q: When viewing students' saved schedules, will advisors have to search term one and term two schedules separately?
+A: Yes, advisors will need to search for term one and term two schedules separately. The system is currently set up to only allow viewing of one term at a time, indicated by the use of radio buttons rather than checkboxes. A suggested workaround is to open each term's saved schedules in separate browser tabs for comparison, although this is acknowledged as not being the ideal solution. To open things in a new tab, you can use control-click or right-click and select "Open link in new tab".
+
+Question 8:
+Q: Will students receive an alert if they have a scheduling conflict with a full-year course in term 2 within a saved schedule?
+A: Students will receive an alert for a scheduling conflict if they are already registered for the conflicting course. If the conflict is within another saved schedule that they have not registered for yet, they will not receive an alert. The two schedules being in different academic periods is the reason why an alert wouldn't be triggered in the latter case. The term 'NA' or 'any' in the table of alerts and errors stands for 'not applicable', which means that the students would not receive an alert in that situation; instead, they might encounter an error that needs to be resolved before proceeding.
+Q: How will advisors know if a student has an alert in a saved schedule if some alerts are not visible to staff?
+A: This is acknowledged as a challenging aspect of the system. Advisors will not be able to see these alerts directly and will have to rely on troubleshooting registration issues by examining the specific courses in question. Workday does not make it super clear, but advisors will have access to other tools and training to help with this process. Additionally, advisors' own knowledge of course requirements, such as the necessity of a lab section for a particular class, will play a crucial role in identifying issues that the system may not explicitly alert them to. Training materials and structured training sessions are planned to be released to further assist advisors with these challenges.
+
+Question 9:
+Q: When does the automatic registration appointment creation occur, and how does it affect students who take a year off?
+A: The registration appointment task should recognize a student as in progress if they have taken a year off from September to August, and they should still receive registration appointments for the following September and winter terms. However, if they do not register for those sessions, their academic record may be discontinued. The policy follows the institution's calendar, which states that after three terms of non-registration, a student will need to reactivate their registration. The system is set up to follow this policy, and if students take the summer period off and do not register for three terms, they will have to get their registration reactivated. This is a complex issue related to institutional policy and the timing of when a student's status is discontinued, which requires further investigation and clarification.
+Q: How will advisors manage and understand the timeline for students who are returning from a break?
+A: There is an upcoming training for advisors that will include a section on verifying a student's program study status to determine if they are in progress or discontinued. This will aid in identifying registration issues. The specific timing of when a student's status changes to discontinued, especially concerning the summer session, is not fully clear and will be investigated further to ensure advisors have the correct information to assist students effectively.
+
+Question 10:
+Q: When are registration appointments released and is the timing the same as before?
+A: Registration appointments are now being released one week before Red Week, as decided by enrollment services. This is a change from the previous schedule, which was two weeks before. The adjustment to one week is for the 2024 winter term to provide additional time needed for administrative processes, such as ensuring students are progressing from year one to year two. However, it is implied that this might revert to the two-week timeframe in the future.
+
+Question 11:
+Q: What is the concern about the one-week notice for registration appointments?
+A: The concern is that a one-week notice for registration appointments may not provide sufficient time for students to plan around their work schedules or other commitments, especially for those who need to be online at specific times to register.
+Q: Who decided to shorten the notice period for registration appointments to one week?
+A: The decision to shorten the notice period for registration appointments to one week was made by enrollment services, not by the Integrated Renewal Program (IRP) team.
+Q: Can advisors see a student's registration appointment before it is published?
+A: No, advisors cannot see a student's registration appointment before it is published. They can see it at the same time as the students, once it is live.
+Q: Can students delete a saved schedule?
+A: Yes, students can delete a saved schedule. They must confirm the deletion through an additional prompt to ensure they want to permanently remove the saved schedule.
+Q: Who can issue tokens for registration, and can instructors issue them?
+A: Only staff advisors with the proper security role can issue tokens for registration. Instructors do not have the ability to issue tokens.
+
+Question 12:
+
+Q: What are tokens, and how might they affect pre-requisite waivers?
+A: Tokens allow students to register for courses they otherwise wouldn't have access to due to prerequisite restrictions. They can be issued before a student's registration appointment, enabling more flexibility in managing pre-requisite waivers.
+Q: Who can issue tokens, and will faculty be involved in this process?
+A: Tokens are issued by staff advisors or administrators with the appropriate security role. While faculty members may request that a student be admitted to a restricted course, they do not directly issue tokens unless they also have a specific advising role and the necessary security permissions.
+Q: How will departments handle the issuance of tokens, especially concerning pre-requisite waivers?
+A: The process may vary between departments. Some might have instructors or department heads decide on waivers, while others might involve administrative staff in issuing tokens based on these decisions. Departments will need to evaluate how to integrate token issuance into their existing processes.
+Q: How can departments track token issuance and ensure they are aware of students being granted access to courses?
+A: Departments can run reports to see which students have been issued tokens and for which courses. This helps maintain oversight of pre-requisite waivers and course enrollments facilitated by tokens.
+Q: Is there a concern about faculty members having access to too much student information if they can issue tokens?
+A: Yes, there is a concern that allowing instructors to issue tokens would grant them access to more student information than appropriate, which is why the capability is restricted to those with specific security roles.
+
+
+
+
+
+
+
+
+
+
