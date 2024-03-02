@@ -11,7 +11,7 @@ def read_text_from_txt(filename):
 text = read_text_from_txt('/Users/luke/Desktop/Canvas/test.txt')
 
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 def text_to_embeddings(text):
     response = openai.Embedding.create(
@@ -29,4 +29,5 @@ def save_embeddings_to_numpy(embeddings, filename):
 
 # Example usage
 save_embeddings_to_numpy(embeddings, 'embeddings.npy')
+
 

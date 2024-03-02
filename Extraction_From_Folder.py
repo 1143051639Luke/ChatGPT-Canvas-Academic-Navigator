@@ -30,7 +30,7 @@ def save_text_to_file(text, output_filepath):
         file.write(text)
 
 # Set the path to your folder and output file
-folder_path = '/Users/luke/Desktop/Canvas/Rsume Foler'
+folder_path = '/Users/luke/Desktop/Canvas/Test folder'
 output_filepath = 'test.txt'
 
 # Process the folder and save the combined text to a file
