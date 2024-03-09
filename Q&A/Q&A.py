@@ -11,14 +11,16 @@ from scipy import spatial  # for calculating vector similarities for search
 EMBEDDING_MODEL = "text-embedding-ada-002"
 GPT_MODEL = "gpt-4-0125-preview"
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "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"))
+# api, stored in computer
+api_key = os.environ["OPENAI_API_KEY"]
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", api_key))
 
 # download pre-chunked text and pre-computed embeddings
 # this file is ~200 MB, so may take a minute depending on your connection speed
-embeddings_path = "/Users/luke/Desktop/Canvas/test2.csv"
+embeddings_path = "Preprocessing/Output/testpdf1_embed.csv"
 
 df = pd.read_csv(embeddings_path)
-#print(df.columns)
+print(df.columns)
 
 # convert embeddings from CSV str type back to list type
 df['Value'] = df['Value'].apply(ast.literal_eval)
@@ -59,7 +61,7 @@ def query_message(
 ) -> str:
     """Return a message for GPT, with relevant source texts pulled from a dataframe."""
     strings, relatednesses = strings_ranked_by_relatedness(query, df)
-    introduction = 'Use the below articles on the 2022 Winter Olympics to answer the subsequent question. If the answer cannot be found in the articles, write "I could not find an answer."'
+    introduction = 'Use the below articles to answer the subsequent question. If the answer cannot be found in the articles, write "I could not find an answer, please research or change a question."'
     question = f"\n\nQuestion: {query}"
     message = introduction
     for string in strings:
@@ -97,7 +99,7 @@ def ask(
     response_message = response.choices[0].message.content
     return response_message
 
-question = "Base on the text I gave to you, who study in UBC?"
+question = "Base on the text I gave to you, Does a greedy algorithm always give the correct solution?"
 answer = ask(query=question)
 print("Answer:", answer)
 
