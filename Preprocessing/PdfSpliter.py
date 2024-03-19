@@ -27,4 +27,4 @@ def spliter(pdf_path, output_folder, edtract_image = False):
     df.to_csv(output_folder, index=False)
 
 # Test and Example
-spliter("Preprocessing/Data/Orginal/CPSC320.pdf","Preprocessing/Data/Middle_csv")
+spliter("Preprocessing/Data/Origin/CPSC320.pdf","Preprocessing/Data/Middle_csv")

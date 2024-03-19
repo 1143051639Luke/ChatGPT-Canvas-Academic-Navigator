@@ -11,7 +11,9 @@ def split_word(docx_path,output_folder):
     for paragraph in doc.paragraphs:
         pages.append(paragraph.text)
         
-    df = pd.DataFrame({'Page Text': pages})
+    df = pd.DataFrame({'Text': pages})
+    # df['Source'] = docx_path
+    # df['Type'] = 'WordDocument'
     
     base_name = os.path.basename(docx_path)
     name, ext = os.path.splitext(base_name)
@@ -20,7 +22,8 @@ def split_word(docx_path,output_folder):
     
     df.to_csv(output_path, index=False)   
     
-split_word("Preprocessing/Data/Orginal/FinalPaper.docx","Preprocessing/Data/Middle_csv") 
+# Test and Examples
+split_word("Preprocessing/Data/Origin/word1.docx","Preprocessing/Data/Middle_csv") 
 
 
 
