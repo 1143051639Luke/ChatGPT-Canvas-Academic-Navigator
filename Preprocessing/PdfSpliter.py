@@ -12,7 +12,7 @@ def spliter(pdf_path, output_folder, edtract_image = False):
     - csv_path: str, the path where the output CSV file should be saved.
     """
     loader = PyPDFLoader(pdf_path, extract_images = edtract_image)
-    pages = loader.load _and_split()
+    pages = loader.load_and_split()
     
     # Creating a DataFrame with the loaded pages
     df = pd.DataFrame(pages)
@@ -27,4 +27,4 @@ def spliter(pdf_path, output_folder, edtract_image = False):
     df.to_csv(output_folder, index=False)
 
 # Test and Example
-spliter("Preprocessing/Data/Origin/CPSC320.pdf","Preprocessing/Data/Middle_csv")
+spliter("Preprocessing/Data/Origin/testpdf_2.pdf","Preprocessing/Data/Middle_csv")

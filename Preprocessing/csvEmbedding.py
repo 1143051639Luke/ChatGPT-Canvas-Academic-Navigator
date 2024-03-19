@@ -12,6 +12,9 @@ def generate_embeddings(input_datapath, output_folder, model="text-embedding-3-s
 
    # Setup the OpenAI client
    api_key = os.environ["OPENAI_API_KEY"]
+   # api_key = "your key" 
+   # If you don't have the API key stored in your environment variables, you can pass it directly to the OpenAI constructor
+
    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", api_key))
 
    # Function to get embedding
@@ -33,4 +36,4 @@ def generate_embeddings(input_datapath, output_folder, model="text-embedding-3-s
 
 
 # Test and Example
-generate_embeddings("Preprocessing/Data/Middle_csv/testpdf_1.csv", "Preprocessing/Data/Embeded",  model="text-embedding-3-large")
+generate_embeddings("Preprocessing/Data/Middle_csv/merged_testpdf.csv", "Preprocessing/Data/Embeded",  model="text-embedding-3-large")

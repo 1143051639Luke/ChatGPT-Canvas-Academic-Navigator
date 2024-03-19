@@ -8,11 +8,13 @@ import os # for getting API token from env variable OPENAI_API_KEY
 from scipy import spatial  # for calculating vector similarities for search
 
 # models
-EMBEDDING_MODEL = "text-embedding-ada-002"
+EMBEDDING_MODEL = "text-embedding-3-large"
 GPT_MODEL = "gpt-4-0125-preview"
 
 # api, stored in computer
 api_key = os.environ["OPENAI_API_KEY"]
+# api_key = "your key" 
+# If you don't have the API key stored in your environment variables, you can pass it directly to the OpenAI constructor
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", api_key))
 
 df = pd.DataFrame()
@@ -99,5 +101,5 @@ def ask(
 
 # Test and Example
 
-answer = Answer("Preprocessing/Data/Embeded/CPSC320_embed.csv", "Base on the text I gave to you,  how to Designing the Algorithm?")
+answer = Answer("Preprocessing/Data/Embeded/merged_testpdf_embed.csv", "Base on the text I gave to you,  how to Designing the Algorithm?")
 print("Answer:", answer)
