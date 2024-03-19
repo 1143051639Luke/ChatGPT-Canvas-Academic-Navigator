@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def CsvMerger(csv_files, output_file):
+def csvMerger(csv_files, output_file):
     
     # Create an empty DataFrame to store the merged data
     merged_data = pd.DataFrame()
@@ -19,4 +19,4 @@ def CsvMerger(csv_files, output_file):
     merged_data.to_csv(output_file, index=False)
 
 # Test and Example
-CsvMerger(["Preprocessing/Data/Middle_csv/testpdf_1.csv", "Preprocessing/Data/Middle_csv/testpdf_2.csv"], "Preprocessing/Data/Middle_csv/merged_testpdf.csv")
+csvMerger(["Preprocessing/Data/Middle_csv/testpdf_1.csv", "Preprocessing/Data/Middle_csv/testpdf_2.csv"], "Preprocessing/Data/Middle_csv/merged_testpdf.csv")
