@@ -6,7 +6,8 @@ from openai import OpenAI
 def generate_embeddings(input_datapath, output_folder, model="text-embedding-3-small"):
    # Load the dataset
    df = pd.read_csv(input_datapath, header = 0)
-   df = df.rename({'0': 'Text', '1': 'Source', '2': 'Type'}, axis='columns')
+   df.columns = ['Text']
+   # df = df.rename({'0': 'Text', '1': 'Source', '2': 'Type'}, axis='columns')
    # Assuming the CSV file already has 'Text' and 'Value' columns
    # If you need to rename columns, do it here based on the actual structure of your CSV
 
@@ -33,4 +34,4 @@ def generate_embeddings(input_datapath, output_folder, model="text-embedding-3-s
 
 
 # Test and Example
-generate_embeddings("Preprocessing/Data/Middle_csv/CPSC320.csv", "Preprocessing/Data/Embeded",  model="text-embedding-3-large")
+generate_embeddings("Preprocessing/Data/Middle_csv/FinalPaper.csv", "Preprocessing/Data/Embeded",  model="text-embedding-3-large")
