@@ -1,0 +1,10 @@
+canvasapi
+colorama
+requests
+tqdm
+retrying
+toml
+packaging
+termcolor
+questionary
+PySide6

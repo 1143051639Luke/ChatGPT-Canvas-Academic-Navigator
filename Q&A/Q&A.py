@@ -15,15 +15,13 @@ GPT_MODEL = "gpt-4-0125-preview"
 api_key = os.environ["OPENAI_API_KEY"]
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", api_key))
 
-# download pre-chunked text and pre-computed embeddings
-# this file is ~200 MB, so may take a minute depending on your connection speed
-embeddings_path = "Preprocessing/Output/testpdf1_embed.csv"
+df = pd.DataFrame()
 
-df = pd.read_csv(embeddings_path)
-print(df.columns)
-
-# convert embeddings from CSV str type back to list type
-df['Value'] = df['Value'].apply(ast.literal_eval)
+def Answer(embeddings_path, question):
+    df = pd.read_csv(embeddings_path)
+    df['Value'] = df['Value'].apply(ast.literal_eval)
+    answer = ask(query=question, df = df)
+    return answer
 
 
 # search function
@@ -61,7 +59,7 @@ def query_message(
 ) -> str:
     """Return a message for GPT, with relevant source texts pulled from a dataframe."""
     strings, relatednesses = strings_ranked_by_relatedness(query, df)
-    introduction = 'Use the below articles to answer the subsequent question. If the answer cannot be found in the articles, write "I could not find an answer, please research or change a question."'
+    introduction = 'Use the below articles to answer the subsequent question. If the answer cannot be found in the articles, write "I could not find an answer, please change a question."'
     question = f"\n\nQuestion: {query}"
     message = introduction
     for string in strings:
@@ -88,7 +86,7 @@ def ask(
     if print_message:
         print(message)
     messages = [
-        {"role": "system", "content": "You answer questions about the 2022 Winter Olympics."},
+        {"role": "system", "content": "You answer questions about the text."},
         {"role": "user", "content": message},
     ]
     response = client.chat.completions.create(
@@ -99,8 +97,7 @@ def ask(
     response_message = response.choices[0].message.content
     return response_message
 
-question = "Base on the text I gave to you, Does a greedy algorithm always give the correct solution?"
-answer = ask(query=question)
+# Test and Example
+
+answer = Answer("Preprocessing/Data/Embeded/CPSC320_embed.csv", "Base on the text I gave to you,  how to Designing the Algorithm?")
 print("Answer:", answer)
-
-

@@ -1,2 +1,0 @@
-class CanvasGrabCliError(Exception):
-    pass
