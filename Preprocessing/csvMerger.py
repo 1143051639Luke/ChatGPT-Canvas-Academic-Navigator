@@ -12,8 +12,6 @@ def csvMerger(csv_files, output_file):
         data = pd.read_csv(file)
         
         merged_data = pd.concat([merged_data, data])
-        # Append the data to the merged_data DataFrame
-        # merged_data = merged_data.append(data, ignore_index=True)
     
     # Write the merged data to a new CSV file
     merged_data.to_csv(output_file, index=False)

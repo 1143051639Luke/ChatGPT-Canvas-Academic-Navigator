@@ -1,6 +1,6 @@
 import os
 from docx import Document
-import fitz  # PyMuPDF
+import fitz
 
 def read_docx_content(filepath):
     """Extract text from a Word document"""

@@ -31,10 +31,6 @@ def mergeAllCsvFiles(folderPath, outputFile):
     """
     Traverses the given folder_path to find all CSV files and merges them into a single CSV file
     located at output_file.
-
-    Args:
-    folder_path (str): The path to the folder to search for CSV files.
-    output_file (str): The path to the resulting merged CSV file.
     """
     # Initialize an empty list to store paths of all CSV files found.
     csv_files = []

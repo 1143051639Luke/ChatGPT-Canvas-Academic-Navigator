@@ -8,7 +8,6 @@ def generate_embeddings(input_datapath, output_folder, model="text-embedding-3-s
    df = pd.read_csv(input_datapath, header = 0)
    df.columns = ['Text', 'Source', 'Type']
    # Assuming the CSV file already has 'Text' and 'Value' columns
-   # If you need to rename columns, do it here based on the actual structure of your CSV
 
    # Setup the OpenAI client
    api_key = os.environ["OPENAI_API_KEY"]
